@@ -55,7 +55,7 @@ def calcula_pontos_soma(dados):
     
     return soma
 
-#questão6 
+#questao6 
 
 def calcula_pontos_sequencia_baixa(dados):
     valores = set(dados)
@@ -80,3 +80,27 @@ def calcula_pontos_sequencia_alta(dados):
         return 30
     
     return 0
+
+#questao8
+
+def calcula_pontos_full_house(dados):
+    contagem = {}
+
+    for dado in dados:
+        if dado in contagem:
+            contagem[dado] += 1
+        else:
+            contagem[dado] = 1
+
+    valores = contagem.values()
+
+    if 3 in valores and 2 in valores:
+        soma = 0
+
+        for dado in dados:
+            soma += dado
+
+        return soma
+
+    return 0
+
