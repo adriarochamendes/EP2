@@ -55,5 +55,17 @@ def calcula_pontos_soma(dados):
     
     return soma
 
-#questão 6 
+#questão6 
+
+def calcula_pontos_sequencia_baixa(dados):
+    valores = set(dados)  # remove duplicados
+    
+    if {1, 2, 3, 4}.issubset(valores):
+        return 15
+    if {2, 3, 4, 5}.issubset(valores):
+        return 15
+    if {3, 4, 5, 6}.issubset(valores):
+        return 15
+    
+    return 0
 
